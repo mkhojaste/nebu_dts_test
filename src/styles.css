@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "IranSans";
+  src: url("app/fonts/IranSans.eot?#iefix") format("embedded-opentype"),
+    url("app/fonts/IranSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("app/fonts/MaterialIcons-Regular.eot");
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url("app/fonts/MaterialIcons-Regular.woff") format("woff"),
+    url("app/fonts/MaterialIcons-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "yekan";
+  src: url("app/fonts/Yekan.eot"),
+    url("app/fonts/Yekan.eot?#iefix") format("embedded-opentype"),
+    url("app/fonts/Yekan.woff") format("woff"),
+    url("app/fonts/Yekan.ttf") format("truetype"),
+    url("app/fonts/Yekan.svg#BYekan") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0600- U+06FF;
+}
+*:not(i) {
+  font-family: "IranSans", "calibri" !important;
+  font-size: 11pt;
+  font-weight: bold;
+  direction: rtl;
+}

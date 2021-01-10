@@ -1,0 +1,8 @@
+iframe{
+    display: block;  
+    border: none;
+}
+button{
+    margin-bottom: 5px;
+    border: 1px solid gray !important;
+}
