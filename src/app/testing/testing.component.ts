@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
 import {data} from '../../assets/data.js';
 import { IPost } from '../_models/IPost.js';
+
+import {WindowRefService} from '../WindowRef.service';
 
 
 @Component({
@@ -19,7 +20,10 @@ export class TestingComponent implements OnInit {
     info:true
   };
   posts: IPost[];
-  constructor() {
+  constructor(private winRef: WindowRefService) {
+    console.log("mmmm is:" );
+    
+    console.log( winRef.nativeWindow["mmmm"]());
     this.def=[
       {className:'dt-center'},
       {className:'dt-center'},
@@ -44,6 +48,7 @@ export class TestingComponent implements OnInit {
 
   callInIframe() {
     console.log(parent.window);
+    
   }
 
 }

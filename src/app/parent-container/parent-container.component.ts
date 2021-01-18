@@ -1,3 +1,4 @@
+import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
+    
   }
   CallFromParent () {
     alert("Hello , (called from child window)");
+  }
+  call() {
+    
   }
 }

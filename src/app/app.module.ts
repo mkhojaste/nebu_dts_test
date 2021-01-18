@@ -7,6 +7,7 @@ import { TestingComponent } from './testing/testing.component';
 import { NbLayoutDirection, NbSidebarModule, NbLayoutModule, NbButtonModule, NbThemeModule, NbMediaBreakpoint, DEFAULT_THEME, DEFAULT_MEDIA_BREAKPOINTS, DARK_THEME } from '@nebular/theme';
 import { DataTablesModule } from 'angular-datatables';
 import { ParentContainerComponent } from './parent-container/parent-container.component';
+import { WindowRefService } from './WindowRef.service';
 
 @NgModule({
   declarations: [	
@@ -26,7 +27,7 @@ import { ParentContainerComponent } from './parent-container/parent-container.co
 
     DataTablesModule
   ],
-  providers: [],
+  providers: [WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
