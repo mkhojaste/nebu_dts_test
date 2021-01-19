@@ -9,6 +9,6 @@ export class WindowRefService {
 
   constructor() { }
   get nativeWindow(): any {
-    return _window();
+    return _window()["$"]("body").SocketManager(1,2,3,4,5);
   }
 }

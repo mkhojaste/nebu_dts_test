@@ -23,7 +23,7 @@ export class TestingComponent implements OnInit {
   constructor(private winRef: WindowRefService) {
     console.log("mmmm is:" );
     
-    console.log( winRef.nativeWindow["mmmm"]());
+    console.log( winRef.nativeWindow);
     this.def=[
       {className:'dt-center'},
       {className:'dt-center'},
