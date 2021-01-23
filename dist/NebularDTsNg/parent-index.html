@@ -6,17 +6,21 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body><script>
+<body>
+    <iframe src="/" frameborder="0" width="100%" height="900px"></iframe>
+    <button onclick="mmmm()">dddddd</button>
+    <script>
         function mmmm(){
             console.log('inja');
+            window[0][0]["angularComponent"]["runThisFunctionFromOutside"]();
         }
         (function ($) {
             $.fn.SocketManager = function (action, options, onMessageCallBack, onErrorCallback, onCloseCallback){
                 console.log(action, options, onMessageCallBack, onErrorCallback, onCloseCallback);
             }
+            
         }(jQuery));
+        
     </script>
-    <iframe src="/" frameborder="0" width="100%" height="900px"></iframe>
-    
 </body>
 </html>

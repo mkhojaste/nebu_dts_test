@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import {data} from '../../assets/data.js';
 import { IPost } from '../_models/IPost.js';
 
@@ -20,7 +20,8 @@ export class TestingComponent implements OnInit {
     info:true
   };
   posts: IPost[];
-  constructor(private winRef: WindowRefService) {
+  constructor(private winRef: WindowRefService, private  _ngZone: NgZone) {
+    (<any>window).angularComponent = {runThisFunctionFromOutside: this.callInIframe, zone: _ngZone};
     console.log("mmmm is:" );
     
     console.log( winRef.nativeWindow);
@@ -47,8 +48,10 @@ export class TestingComponent implements OnInit {
   }
 
   callInIframe() {
-    console.log(parent.window);
-    
+    console.log('fsdfsd');
+    // this._ngZone.run(() => {
+    //   console.log("mmemmejjek");
+    // });
   }
 
 }
